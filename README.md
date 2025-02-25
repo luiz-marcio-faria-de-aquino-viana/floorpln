@@ -6,6 +6,7 @@ Professores:
 - Inês de Castro Dutra (https://sigarra.up.pt/fcup/pt/func_geral.formview?p_codigo=427256);
 
 Autor(100%): Luiz Marcio Faria de Aquino Viana, Pós-D.Sc.
+
 Prazo de dezenvolvimento dos programas: 15 dias
 
 Aplicação: Trabalho de Implementação do Problema Floorplan Design.
