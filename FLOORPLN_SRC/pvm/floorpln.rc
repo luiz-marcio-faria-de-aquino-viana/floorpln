@@ -1,0 +1,4 @@
+echo "######################################"
+echo "# Compiling Floorplan.c -> Floorplan #"
+echo "######################################"
+gcc -O -I$PVM_ROOT/include -DSYSVSIGNAL -DNOWAIT3 -DNOUNIXDOM -DRSHCOMMAND=\"/usr/bin/rsh\" -DNEEDENDIAN -o floorpln floorpln.c -L$PVM_ROOT/lib/LINUX -lgpvm3 -lpvm3

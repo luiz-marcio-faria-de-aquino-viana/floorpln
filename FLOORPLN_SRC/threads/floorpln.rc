@@ -1,0 +1,4 @@
+echo "######################################"
+echo "# Compiling Floorplan.c -> Floorplan #"
+echo "######################################"
+gcc floorpln.c -o floorpln -Wall -m486 -O2 -lm -lpthread -D_REENTRANT

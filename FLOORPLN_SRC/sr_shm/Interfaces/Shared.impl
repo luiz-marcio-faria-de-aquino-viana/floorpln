@@ -1,0 +1,5 @@
+#  global Shared
+#  from   /home/lmarcio/floorpln/sr_shm/floorpln.sr
+
+p  SelectNextSet
+p  UpdateChoice

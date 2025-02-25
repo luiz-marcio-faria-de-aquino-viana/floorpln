@@ -1,0 +1,493 @@
+
+global Param
+	const MAX_AREA : real := 1.0e99
+
+	const SUM_WIDTH  := 0
+	const SUM_HEIGHT := 1
+
+	type TStr = string [64]
+
+	var NProc : int := 8
+body Param
+	if numargs() > 0 -> getarg(1, NProc); fi
+end
+
+global InitCells
+	import Param
+
+	const F_CELLS   := "cells.dat"
+
+	type TInstance = rec (
+		Width : real,
+		Height : real,
+		Next : ptr TInstance )
+
+	type TCell = rec (
+		CellId : TStr,
+		CellOrd : int,
+		NInstances : int,
+		Instances : ptr TInstance,
+		Next : ptr TCell )
+
+	type TCellsList = rec (
+		NCells : int,
+		FirstCell : ptr TCell,
+		LastCell : ptr TCell )
+
+	var CellsList : TCellsList
+
+	op CellDim(PtrCell : ptr TCell; Pos : int; Mode : int) returns R : real 
+	op DisplayCells()
+
+body InitCells
+	procedure AddCell(Cell : TCell) returns R : ptr TCell
+		var Pt : ptr TCell
+
+		Pt := new(TCell)
+		if Pt = null -> write("ERR: Can't allocate memory for cell definition."); stop(1); fi
+
+		Pt^.CellId := Cell.CellId
+		Pt^.CellOrd := Cell.CellOrd
+		Pt^.NInstances := Cell.NInstances
+		Pt^.Instances := null
+		Pt^.Next := null
+
+		if CellsList.FirstCell = null ->
+			CellsList.FirstCell := Pt
+		[] true ->
+			CellsList.LastCell^.Next := Pt
+		fi
+		CellsList.LastCell := Pt
+
+		R := Pt
+	end
+
+	procedure AddInstance(PtrCell : ptr TCell; Instance : TInstance)
+		var Pt : ptr TInstance
+
+		Pt := new(TInstance)
+		if Pt = null -> write("ERR: Can't allocate memory for add instance."); stop(1); fi
+
+		Pt^.Width := Instance.Width
+		Pt^.Height := Instance.Height
+		Pt^.Next := PtrCell^.Instances
+		PtrCell^.Instances := Pt
+	end
+
+	proc CellDim(PtrCell, Pos, Mode) returns R 
+		var PtrInstance : ptr TInstance := PtrCell^.Instances
+		do Pos > 1 ->
+			PtrInstance := PtrInstance^.Next
+			if PtrInstance = null -> write("ERR: Subscripte out of range."); stop(1); fi
+			Pos := Pos - 1
+		od
+
+		if Mode = SUM_WIDTH ->
+			R := PtrInstance^.Width
+		[] true ->
+			R := PtrInstance^.Height
+		fi
+	end
+
+	proc DisplayCells()
+		var PtrCell : ptr TCell
+		var PtrInstance : ptr TInstance
+
+		var I : int
+
+		PtrCell := CellsList.FirstCell
+		do PtrCell != null ->
+			write("Cell identifier     = ", PtrCell^.CellId)
+			write("Number of instances = ", PtrCell^.NInstances)
+
+			PtrInstance := PtrCell^.Instances
+
+			I := 1
+			do PtrInstance != null ->
+				write("\t(", I, ") ", PtrInstance^.Width, " x ", PtrInstance^.Height)
+				PtrInstance := PtrInstance^.Next
+				I := I + 1
+			od
+			PtrCell := PtrCell^.Next
+		od
+	end
+
+	var F : file
+
+	var TmpCell : TCell
+	var TmpInstance : TInstance
+
+	var PtrCell : ptr TCell := null
+
+	var I, J : int
+
+	F := open(F_CELLS, READ)
+	if F = null -> write("ERR: Can't open cells definition file.\n"); stop(1); fi
+
+	read(F, CellsList.NCells)
+	CellsList.FirstCell := null
+	CellsList.LastCell := null
+
+	fa I := 1 to CellsList.NCells ->
+		read(F, TmpCell.CellId)
+		read(F, TmpCell.NInstances)
+		TmpCell.CellOrd := I
+		PtrCell := AddCell(TmpCell)
+		fa J := 1 to TmpCell.NInstances ->
+			read(F, TmpInstance.Width, TmpInstance.Height)
+			AddInstance(PtrCell, TmpInstance)
+		af
+	af
+	close(F)
+end
+
+global InitGraphs
+	import Param, InitCells
+
+	const F_GRAPH_G := "graph_g.dat"
+	const F_GRAPH_H := "graph_h.dat"
+
+	type TNode = rec (
+		NodeId : TStr,
+		NEdges : int,
+		Edges : ptr TEdge,
+		Next : ptr TNode )
+
+	type TEdge = rec (
+		CellPt : ptr TCell,
+		DstNodePt : ptr TNode,
+		Next : ptr TEdge )
+
+	type TGraph = rec (
+		NNodes : int,
+		First : ptr TNode,
+		Last : ptr TNode )
+
+	var GraphG : TGraph
+	var GraphH : TGraph
+
+	op DisplayGraph(Graph : TGraph)
+body InitGraphs
+	procedure SearchCell(CellId : TStr) returns R : ptr TCell
+		var Pt : ptr TCell
+		var Found : int := 0
+
+		Pt := CellsList.FirstCell
+		do Found != 1 & Pt != null ->
+			if Pt^.CellId = CellId -> Found := 1
+			[] true -> Pt := Pt^.Next
+			fi
+		od
+
+		if Found = 1 -> R := Pt
+		[] true -> R := null
+		fi
+	end
+
+	procedure SearchNode(Graph : TGraph; NodeId : TStr) returns R : ptr TNode
+		var Pt : ptr TNode
+		var Found : int := 0
+
+		var Node : TNode
+
+		Pt := Graph.First
+		do Found != 1 & Pt != null ->
+			if Pt^.NodeId = NodeId -> Found := 1
+			[] true -> Pt := Pt^.Next
+			fi
+		od
+
+		if Found = 1 -> R := Pt
+		[] true -> R := null
+		fi
+	end
+
+	procedure AddNode(ref Graph : TGraph; Node : TNode) returns R : ptr TNode
+		var Pt : ptr TNode
+
+		Pt := SearchNode(Graph, Node.NodeId)
+		if Pt = null ->
+			Pt := new(TNode)
+			if Pt = null -> write("ERR: Can't allocate memory for node definition."); stop(1); fi
+		fi
+
+		Pt^.NodeId := Node.NodeId
+		Pt^.NEdges := Node.NEdges
+		Pt^.Edges := null
+		Pt^.Next := null
+
+		if Graph.First = null ->
+			Graph.First := Pt
+		[] true ->
+			Graph.Last^.Next := Pt
+		fi
+		Graph.Last := Pt
+
+		R := Pt
+	end
+
+	procedure AddEdge(PtrNode : ptr TNode; Edge : TEdge)
+		var Pt : ptr TEdge
+
+		Pt := new(TEdge)
+		if Pt = null -> write("ERR: Can't allocate memory for edge definition."); stop(1); fi
+
+		Pt^.CellPt := Edge.CellPt
+		Pt^.DstNodePt := Edge.DstNodePt
+		Pt^.Next := PtrNode^.Edges
+		PtrNode^.Edges := Pt
+	end
+
+	procedure ReadGraphFile(FName : TStr; ref Graph : TGraph)
+		var F : file
+
+		var TmpNode, TmpNodeAux : TNode
+		var TmpEdge : TEdge
+
+		var PtrNode, TmpPtrNode : ptr TNode
+
+		var CellId, NodeId : TStr
+		var I, J : int
+
+		F := open(FName, READ)
+		if F = null -> write("ERR: Can't open graph definition file.\n"); stop(1); fi
+
+		read(F, Graph.NNodes)
+		Graph.First := null
+		Graph.Last := null
+
+		fa I := 1 to Graph.NNodes ->
+			read(F, TmpNode.NodeId)
+			read(F, TmpNode.NEdges)
+
+			TmpPtrNode := SearchNode(Graph, TmpNode.NodeId)
+			if TmpPtrNode = null ->
+				PtrNode := AddNode(Graph, TmpNode)
+			[] true ->
+				PtrNode := TmpPtrNode
+				PtrNode^.NEdges := TmpNode.NEdges
+			fi
+
+			fa J := 1 to TmpNode.NEdges ->
+				read(F, CellId)
+				read(F, NodeId)
+
+				TmpEdge.CellPt := SearchCell(CellId)
+				TmpEdge.DstNodePt := SearchNode(Graph, NodeId)
+
+				if TmpEdge.DstNodePt = null ->
+					TmpNodeAux.NodeId := NodeId
+					TmpNodeAux.NEdges := 0
+					TmpEdge.DstNodePt := AddNode(Graph, TmpNodeAux)
+				fi
+				AddEdge(PtrNode, TmpEdge)
+			af
+		af
+		close(F)
+	end
+
+	proc DisplayGraph(Graph)
+		var PtrNode : ptr TNode
+		var PtrEdge : ptr TEdge
+
+		var I : int
+
+		PtrNode := Graph.First
+		do PtrNode != null ->
+			write("\nNode identifier = ", PtrNode^.NodeId)
+			write("Number of edges = ", PtrNode^.NEdges)
+
+			PtrEdge := PtrNode^.Edges
+
+			I := 1
+			do PtrEdge != null ->
+				write("\t(", I, ")\tEdge identifier = ", PtrEdge^.CellPt^.CellId)
+				write("\t\tConect destination node = ", PtrEdge^.DstNodePt^.NodeId)
+				PtrEdge := PtrEdge^.Next
+				I := I + 1
+			od
+			PtrNode := PtrNode^.Next
+		od
+	end
+
+	ReadGraphFile(F_GRAPH_G, GraphG)
+	ReadGraphFile(F_GRAPH_H, GraphH)
+end
+
+global Shared
+	import Param, InitCells, InitGraphs
+
+	const N : int := CellsList.NCells
+
+	var Choice : rec (
+		Area : real
+		Width : real
+		Height : real
+	)
+
+	var SSet[N] : int
+
+	var WSet[N] : int
+
+	var Terminated : int := 0
+
+	op SelectNextSet(ref CSet[*] : int) returns R : int
+	op UpdateChoice(CArea : real; CWidth : real; CHeight : real; CSet[*] : int)
+
+body Shared
+	sem LockChoice := 1
+	sem LockWSet := 1
+
+	proc SelectNextSet(CSet) returns R
+		var PtrCell : ptr TCell
+		var flag : int := 1;
+
+		var I : int := 1
+
+		write("<DBG> Working set requested.")
+
+		if Terminated != 1 ->
+			PtrCell := CellsList.FirstCell
+			P(LockWSet)
+			do PtrCell != null ->
+				CSet[I] := WSet[I]
+				if flag = 1 ->
+					WSet[I] := WSet[I] + 1
+					if WSet[I] <= PtrCell^.NInstances -> flag := 0
+					[] true -> WSet[I] := 1
+					fi
+				fi
+				PtrCell := PtrCell^.Next
+				I := I + 1
+			od
+			V(LockWSet)
+			write("<DBG> Working set sent.")
+			if flag = 1 -> Terminated := 1; fi
+		fi
+		R := flag
+	end
+
+	proc UpdateChoice(CArea, CWidth, CHeight, CSet)
+		P(LockChoice)
+		if CArea < Choice.Area ->
+			Choice.Area := CArea
+			Choice.Width := CWidth
+			Choice.Height := CHeight
+			fa I := 1 to CellsList.NCells ->
+				SSet[I] := CSet[I]
+			af
+		fi
+		V(LockChoice)
+	end
+
+	Choice.Area := MAX_AREA
+	Choice.Width := 0
+	Choice.Height := 0
+
+	fa I := 1 to CellsList.NCells ->
+		SSet[I] := 1
+		WSet[I] := 1
+	af
+end
+
+resource main()
+	import Param, InitCells, InitGraphs, Shared
+
+	procedure DisplayWSet(WSet[*] : int)
+		var PtrCell : ptr TCell := CellsList.FirstCell
+
+		do PtrCell != null ->
+			write("\t(", PtrCell^.CellId, ") ",
+				CellDim(PtrCell, WSet[PtrCell^.CellOrd], SUM_WIDTH), " x ",
+				CellDim(PtrCell, WSet[PtrCell^.CellOrd], SUM_HEIGHT) )
+			PtrCell := PtrCell^.Next
+		od
+	end
+
+	procedure DisplayResult()
+		var PtrCell : ptr TCell := CellsList.FirstCell
+
+		do PtrCell != null ->
+			write("\t(", PtrCell^.CellId, ") ",
+				CellDim(PtrCell, SSet[PtrCell^.CellOrd], SUM_WIDTH), " x ",
+				CellDim(PtrCell, SSet[PtrCell^.CellOrd], SUM_HEIGHT) )
+			PtrCell := PtrCell^.Next
+		od
+	end
+
+	procedure EvaluateDimension(PtrOrig : ptr TNode; CSet[*] : int; Val : real;
+							ref CVal : real; Mode : int)
+		var PtrEdge : ptr TEdge := PtrOrig^.Edges
+
+		var PtrCell : ptr TCell
+		var PtrNode : ptr TNode
+
+		if Val > CVal -> CVal := Val; fi
+
+		do PtrEdge != null ->
+			PtrCell := PtrEdge^.CellPt
+			PtrNode := PtrEdge^.DstNodePt
+
+			if Mode = SUM_WIDTH ->
+				EvaluateDimension(PtrNode, CSet, Val + CellDim(PtrCell,
+							CSet[PtrCell^.CellOrd], Mode), CVal, Mode)
+			[] true ->
+				EvaluateDimension(PtrNode, CSet, Val + CellDim(PtrCell,
+							CSet[PtrCell^.CellOrd], Mode), CVal, Mode)
+			fi
+			PtrEdge := PtrEdge^.Next
+		od
+	end
+
+	process EvaluateArea(ProcId := 1 to NProc)
+		var Area : real
+
+		var Width : real
+                var Height : real
+
+		var CSet[N] : int
+		var I : int
+
+		fa I := 1 to N -> CSet[I] := 1; af
+
+		do Terminated != 1 ->
+			SelectNextSet(CSet)
+
+			write("<DBG> Current working set for task (", ProcId, ")")
+			DisplayWSet(CSet)
+
+			Width := 0
+			Height := 0
+
+			EvaluateDimension(GraphH.First, CSet, 0.0, Width, SUM_WIDTH)
+			EvaluateDimension(GraphG.First, CSet, 0.0, Height, SUM_HEIGHT)
+
+			Area := Width * Height
+			write("<DBG> Area calculated = ", Area, " (", Width, " x ", Height, ")")
+
+			UpdateChoice(Area, Width, Height, CSet)
+		od
+	end
+
+	final
+		write("RESULT\n======\n")
+
+		write("The best area is ", Choice.Area, "un2 (", Choice.Width, " x ", Choice.Height, ").")
+		write("With the follow instances.")
+		DisplayResult()
+	end
+
+	write("FLOORPLAN DESIGN PROBLEM")
+	write("========================")
+
+	write("\nNumero de processadores = ", NProc)
+
+	write("\nCELLS' LIST\n===========")
+	DisplayCells()
+
+	write("\nGRAPH G\n=======")
+	DisplayGraph(GraphG)
+
+	write("\nGRAPH H\n=======")
+	DisplayGraph(GraphH)
+end

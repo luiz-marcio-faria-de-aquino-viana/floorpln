@@ -1,0 +1,46 @@
+
+global param
+	const FILE_CELLS	:= "cells.dat"
+	const FILE_GRAPH_G	:= "graph_g.dat"
+	const FILE_GRAPH_H	:= "graph_h.dat"
+
+	type TStr = string [256]
+
+	type TInstance = rec (
+		Width : real
+		Height : real )
+
+	type TCell = rec (
+		CellId : TStr
+		NumInstance : int
+		InstanceList : ptr TInstance
+		NextCell : ptr TCell )
+
+	var NProcs : int := 8
+body param
+	var S
+	getarg(1, S)
+
+resource floorplan
+	var CellsList : ptr TCell
+
+	procedure RetrieveCells()
+        	var Fd : file
+		var Buf : TStr
+		var Pos : int := -1
+
+		Fd := open(FILE_CELLS, READ)
+		if Fd = null -> write("ERR: Can't open cells' definition file."); stop(1); fi
+
+		do where(Fd) > Pos ->
+			Pos := where(Fd)
+			read(Fd, Buf)
+		od
+
+		close(Fd)
+	end
+
+	process 
+
+end
+

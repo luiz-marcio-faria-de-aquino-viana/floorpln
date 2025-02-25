@@ -1,0 +1,1587 @@
+FLOORPLAN DESIGN PROBLEM
+========================
+
+Numero de processadores =  2
+
+CELLS' LIST
+===========
+Cell identifier     =  A
+Number of instances =  6
+	( 1 )  4.00000  x  6.00000
+	( 2 )  6.00000  x  4.00000
+	( 3 )  10.0000  x  5.00000
+	( 4 )  5.00000  x  3.00000
+	( 5 )  3.00000  x  5.00000
+	( 6 )  5.00000  x  10.0000
+Cell identifier     =  B
+Number of instances =  6
+	( 1 )  3.00000  x  4.00000
+	( 2 )  5.00000  x  6.00000
+	( 3 )  4.00000  x  4.00000
+	( 4 )  9.00000  x  4.00000
+	( 5 )  4.00000  x  9.00000
+	( 6 )  3.00000  x  12.0000
+Cell identifier     =  C
+Number of instances =  6
+	( 1 )  5.00000  x  4.00000
+	( 2 )  7.00000  x  6.00000
+	( 3 )  5.00000  x  7.00000
+	( 4 )  3.50000  x  4.00000
+	( 5 )  4.00000  x  3.50000
+	( 6 )  4.00000  x  5.00000
+
+GRAPH G
+=======
+
+Node identifier =  n1
+Number of edges =  2
+	( 1 )	Edge identifier =  B
+		Conect destination node =  n2
+	( 2 )	Edge identifier =  A
+		Conect destination node =  n3
+
+Node identifier =  n3
+Number of edges =  0
+
+Node identifier =  n2
+Number of edges =  1
+	( 1 )	Edge identifier =  C
+		Conect destination node =  n3
+
+GRAPH H
+=======
+
+Node identifier =  n1
+Number of edges =  1
+	( 1 )	Edge identifier =  A
+		Conect destination node =  n2
+
+Node identifier =  n2
+Number of edges =  2
+	( 1 )	Edge identifier =  C
+		Conect destination node =  n3
+	( 2 )	Edge identifier =  B
+		Conect destination node =  n3
+
+Node identifier =  n3
+Number of edges =  0
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  72.0000  ( 9.00000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  88.0000  ( 11.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  120.000  ( 15.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  80.0000  ( 10.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  64.0000  ( 8.00000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  100.000  ( 10.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  90.0000  ( 9.00000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  110.000  ( 11.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  150.000  ( 15.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  100.000  ( 10.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  80.0000  ( 8.00000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  100.000  ( 10.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  72.0000  ( 9.00000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  88.0000  ( 11.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  120.000  ( 15.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  80.0000  ( 10.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  64.0000  ( 8.00000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  100.000  ( 10.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  104.000  ( 13.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  120.000  ( 15.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  152.000  ( 19.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  112.000  ( 14.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  96.0000  ( 12.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  140.000  ( 14.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  117.000  ( 9.00000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  143.000  ( 11.0000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  195.000  ( 15.0000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  130.000  ( 10.0000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  104.000  ( 8.00000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  130.000  ( 10.0000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  144.000  ( 9.00000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  176.000  ( 11.0000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  240.000  ( 15.0000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  160.000  ( 10.0000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  128.000  ( 8.00000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  4.00000
+<DBG> Area calculated =  160.000  ( 10.0000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  110.000  ( 11.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  130.000  ( 13.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  170.000  ( 17.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  120.000  ( 12.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  100.000  ( 10.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  120.000  ( 12.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  5.00000  x  6.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  132.000  ( 11.0000  x  12.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  5.00000  x  6.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  156.000  ( 13.0000  x  12.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  204.000  ( 17.0000  x  12.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  5.00000  x  6.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  144.000  ( 12.0000  x  12.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  120.000  ( 10.0000  x  12.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  5.00000  x  6.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  144.000  ( 12.0000  x  12.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  110.000  ( 11.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  130.000  ( 13.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  170.000  ( 17.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  120.000  ( 12.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  100.000  ( 10.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  120.000  ( 12.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  9.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  130.000  ( 13.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  9.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  150.000  ( 15.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  190.000  ( 19.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  9.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  140.000  ( 14.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  120.000  ( 12.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  9.00000  x  4.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  140.000  ( 14.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  9.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  165.000  ( 11.0000  x  15.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  9.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  195.000  ( 13.0000  x  15.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  255.000  ( 17.0000  x  15.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  9.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  180.000  ( 12.0000  x  15.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  150.000  ( 10.0000  x  15.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  9.00000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  180.000  ( 12.0000  x  15.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  12.0000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  198.000  ( 11.0000  x  18.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  12.0000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  234.000  ( 13.0000  x  18.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  306.000  ( 17.0000  x  18.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  12.0000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  216.000  ( 12.0000  x  18.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  180.000  ( 10.0000  x  18.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  12.0000
+	( C )  7.00000  x  6.00000
+<DBG> Area calculated =  216.000  ( 12.0000  x  18.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  99.0000  ( 9.00000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  121.000  ( 11.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  165.000  ( 15.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  110.000  ( 10.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  88.0000  ( 8.00000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  110.000  ( 10.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  117.000  ( 9.00000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  143.000  ( 11.0000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  195.000  ( 15.0000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  130.000  ( 10.0000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  104.000  ( 8.00000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  5.00000  x  6.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  130.000  ( 10.0000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  99.0000  ( 9.00000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  121.000  ( 11.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  165.000  ( 15.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  110.000  ( 10.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  88.0000  ( 8.00000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  110.000  ( 10.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  143.000  ( 13.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  165.000  ( 15.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  209.000  ( 19.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  154.000  ( 14.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  132.000  ( 12.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  9.00000  x  4.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  154.000  ( 14.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  144.000  ( 9.00000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  176.000  ( 11.0000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  240.000  ( 15.0000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  160.000  ( 10.0000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  128.000  ( 8.00000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  9.00000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  160.000  ( 10.0000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  171.000  ( 9.00000  x  19.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  209.000  ( 11.0000  x  19.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  285.000  ( 15.0000  x  19.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  190.000  ( 10.0000  x  19.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  152.000  ( 8.00000  x  19.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  12.0000
+	( C )  5.00000  x  7.00000
+<DBG> Area calculated =  190.000  ( 10.0000  x  19.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  60.0000  ( 7.50000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  76.0000  ( 9.50000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  108.000  ( 13.5000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  68.0000  ( 8.50000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  52.0000  ( 6.50000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  85.0000  ( 8.50000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  5.00000  x  6.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  90.0000  ( 9.00000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  5.00000  x  6.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  110.000  ( 11.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  150.000  ( 15.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  5.00000  x  6.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  100.000  ( 10.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  80.0000  ( 8.00000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  5.00000  x  6.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  100.000  ( 10.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  64.0000  ( 8.00000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  80.0000  ( 10.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  112.000  ( 14.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  72.0000  ( 9.00000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  56.0000  ( 7.00000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  90.0000  ( 9.00000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  9.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  104.000  ( 13.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  9.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  120.000  ( 15.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  152.000  ( 19.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  9.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  112.000  ( 14.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  96.0000  ( 12.0000  x  8.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  9.00000  x  4.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  140.000  ( 14.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  9.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  104.000  ( 8.00000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  9.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  130.000  ( 10.0000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  182.000  ( 14.0000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  9.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  117.000  ( 9.00000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  91.0000  ( 7.00000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  9.00000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  117.000  ( 9.00000  x  13.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  12.0000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  120.000  ( 7.50000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  12.0000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  152.000  ( 9.50000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  216.000  ( 13.5000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  12.0000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  136.000  ( 8.50000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  104.000  ( 6.50000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  12.0000
+	( C )  3.50000  x  4.00000
+<DBG> Area calculated =  136.000  ( 8.50000  x  16.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  60.0000  ( 8.00000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  75.0000  ( 10.0000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  105.000  ( 14.0000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  67.5000  ( 9.00000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  52.5000  ( 7.00000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  90.0000  ( 9.00000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  85.5000  ( 9.00000  x  9.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  104.500  ( 11.0000  x  9.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  142.500  ( 15.0000  x  9.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  95.0000  ( 10.0000  x  9.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  76.0000  ( 8.00000  x  9.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  10.0000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  100.000  ( 10.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  60.0000  ( 8.00000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  75.0000  ( 10.0000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  105.000  ( 14.0000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  67.5000  ( 9.00000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 1 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  90.0000  ( 9.00000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  4.00000  x  6.00000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  97.5000  ( 13.0000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  6.00000  x  4.00000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  112.500  ( 15.0000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  10.0000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  142.500  ( 19.0000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  3.00000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  105.000  ( 14.0000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  3.00000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  90.0000  ( 12.0000  x  7.50000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  10.0000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  140.000  ( 14.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  100.000  ( 8.00000  x  12.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  125.000  ( 10.0000  x  12.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  175.000  ( 14.0000  x  12.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  112.500  ( 9.00000  x  12.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  87.5000  ( 7.00000  x  12.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  112.500  ( 9.00000  x  12.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  124.000  ( 8.00000  x  15.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  155.000  ( 10.0000  x  15.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  217.000  ( 14.0000  x  15.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  139.500  ( 9.00000  x  15.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  108.500  ( 7.00000  x  15.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  3.50000
+<DBG> Area calculated =  139.500  ( 9.00000  x  15.5000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  72.0000  ( 8.00000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  90.0000  ( 10.0000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  126.000  ( 14.0000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  81.0000  ( 9.00000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  63.0000  ( 7.00000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  90.0000  ( 9.00000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  4.00000  x  6.00000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  99.0000  ( 9.00000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  6.00000  x  4.00000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  121.000  ( 11.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  10.0000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  165.000  ( 15.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  3.00000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  110.000  ( 10.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  3.00000  x  5.00000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  88.0000  ( 8.00000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  10.0000
+	( B )  5.00000  x  6.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  110.000  ( 10.0000  x  11.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  72.0000  ( 8.00000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  90.0000  ( 10.0000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  126.000  ( 14.0000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  81.0000  ( 9.00000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  63.0000  ( 7.00000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  90.0000  ( 9.00000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  4.00000  x  6.00000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  117.000  ( 13.0000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  6.00000  x  4.00000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  135.000  ( 15.0000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  10.0000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  171.000  ( 19.0000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  3.00000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  126.000  ( 14.0000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  3.00000  x  5.00000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  108.000  ( 12.0000  x  9.00000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  10.0000
+	( B )  9.00000  x  4.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  140.000  ( 14.0000  x  10.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  4.00000  x  6.00000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  112.000  ( 8.00000  x  14.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  6.00000  x  4.00000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  140.000  ( 10.0000  x  14.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  10.0000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  196.000  ( 14.0000  x  14.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  3.00000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  126.000  ( 9.00000  x  14.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  3.00000  x  5.00000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  98.0000  ( 7.00000  x  14.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  10.0000
+	( B )  4.00000  x  9.00000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  126.000  ( 9.00000  x  14.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  4.00000  x  6.00000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  136.000  ( 8.00000  x  17.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  6.00000  x  4.00000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  170.000  ( 10.0000  x  17.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  10.0000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  238.000  ( 14.0000  x  17.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  3.00000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  153.000  ( 9.00000  x  17.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  119.000  ( 7.00000  x  17.0000 )
+<DBG> Working set requested.
+<DBG> Working set sent.
+<DBG> Current working set for task ( 2 )
+	( A )  5.00000  x  10.0000
+	( B )  3.00000  x  12.0000
+	( C )  4.00000  x  5.00000
+<DBG> Area calculated =  153.000  ( 9.00000  x  17.0000 )
+<DBG> Area calculated =  52.5000  ( 7.00000  x  7.50000 )
+RESULT
+======
+
+The best area is  52.0000 un2 ( 6.50000  x  8.00000 ).
+With the follow instances.
+	( A )  3.00000  x  5.00000
+	( B )  3.00000  x  4.00000
+	( C )  3.50000  x  4.00000

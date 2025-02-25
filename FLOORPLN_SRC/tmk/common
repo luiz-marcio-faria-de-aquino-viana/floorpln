@@ -1,0 +1,21 @@
+TmkDIR	= /usr/Tmk
+TmkLIB	= $(TmkDIR)/lib.$(ARCH)
+
+CPPFLAGS= -I$(TmkDIR)/include
+
+OBJS	= $(MACHDEP_OBJS) floorpln.o 
+
+floorpln.atm: $(OBJS) $(TmkLIB)/libTmk_atm.a
+	$(CC) $(CFLAGS) -o $@ $(OBJS) -L$(TmkLIB) -lTmk_atm -L/usr/fore/lib -latm $(MACHDEP_LIBS)
+
+floorpln.udp: $(OBJS) $(TmkLIB)/libTmk_udp.a
+	$(CC) $(CFLAGS) -o $@ $(OBJS) -L$(TmkLIB) -lTmk_udp $(MACHDEP_LIBS)
+
+floorpln.udp_ll: $(OBJS) $(TmkLIB)/libTmk_udp_ll.a
+	$(CC) $(CFLAGS) -o $@ $(OBJS) -L$(TmkLIB) -lTmk_udp_ll -L$(LL)/lib -lllapi $(MACHDEP_LIBS)
+
+floorpln.o: floorpln.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c floorpln.c
+
+clean:
+	rm -f *.o *.atm *.udp *.udp_ll

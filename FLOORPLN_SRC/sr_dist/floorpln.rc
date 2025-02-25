@@ -1,0 +1,7 @@
+echo -o *************************************
+echo -o * Compiling floorpln.sr -> floorpln *
+echo -o *************************************
+rm floorpln
+sr floorpln.sr
+mv a.out floorpln
+

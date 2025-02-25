@@ -1,0 +1,5 @@
+#  global InitCells
+#  from   /home/lmarcio/floorpln/sr_shm/floorpln.sr
+
+p  CellDim
+p  DisplayCells

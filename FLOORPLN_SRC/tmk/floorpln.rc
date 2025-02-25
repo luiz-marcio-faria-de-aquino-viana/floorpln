@@ -1,0 +1,5 @@
+echo "######################################"
+echo "# Compiling Floorplan.c -> Floorplan #"
+echo "######################################"
+make all
+

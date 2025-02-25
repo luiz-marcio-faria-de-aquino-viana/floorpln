@@ -1,0 +1,8 @@
+
+# origin n link1 dest1 link2 dest2 ... link-n dest-n
+
+n1 3 A n2 F n4 D n2
+n2 2 B n3 E n4
+n3 1 C n4
+n4 1 G n5
+
