@@ -1,5 +1,5 @@
 # floorpln
-Trabalho de Implementação do Problema Floorplan Design, desenvolvido para o Curso de Mestrado/Doutorado em Engenharia de Sistemas e Computadores da COPPE/UFRJ entre 1998-2002.
+Trabalho de Implementação do Problema Floorplan Design, desenvolvido para o Curso de Mestrado/Doutorado em Engenharia de Sistemas e Computação da COPPE/UFRJ entre 1998-2002.
 
 Disciplina: Programação Concorrente
 Professores: 
