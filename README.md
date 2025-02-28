@@ -34,3 +34,11 @@ O problema do Floorplan Design esta relacionado ao último passo do processo de 
 - SR_DIST e SR_SHM - Ref: https://en.wikipedia.org/wiki/SR_(programming_language)
 - THREADS - Ref: https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html
 - TMK - Software DSM (Distributed Shared Memory) - Ref: https://en.wikipedia.org/wiki/Distributed_shared_memory
+
+# CONTATO
+
+CONTACT ME, IF YOU NEED HELP OR HAVE ANY QUESTIONS ABOUT THIS ACADEMIC WORK!
+
+Luiz Marcio Faria de Aquino Viana,Pós-D.Sc.
+E-mail: luiz.marcio.viana@gmail.com
+Phone/WhatsApp: +55-21-99983-7207
